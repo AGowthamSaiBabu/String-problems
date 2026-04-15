@@ -38,20 +38,33 @@
 // }
 
 // 16 Right rotate the array by one
+// public class BasiceString6 {
+//     public static void main(String[] args) {
+//         int [] arr ={1,2,3,4};
+//         int n =arr.length;
+
+//         int temp =arr[n-1];
+
+//         for(int i = n-1;i>0;i--){
+//             arr[i] = arr[i-1];
+//         }
+//         arr[0]=temp;
+
+//         for(int i =0;i<n;i++){
+//             System.out.print(arr[i]+" ");
+//         }
+//     }
+// }
+
+// 18. Count Number of Words in a String
+
 public class BasiceString6 {
     public static void main(String[] args) {
-        int [] arr ={1,2,3,4};
-        int n =arr.length;
+        String str ="Java is awesome";
 
-        int temp =arr[n-1];
-
-        for(int i = n-1;i>0;i--){
-            arr[i] = arr[i-1];
-        }
-        arr[0]=temp;
-
-        for(int i =0;i<n;i++){
-            System.out.print(arr[i]+" ");
-        }
+        String [] words =str.split(" ");
+        int count = words.length;
+        
+        System.out.println("Number of words: "+count);
     }
 }
