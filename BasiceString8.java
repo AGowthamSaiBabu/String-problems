@@ -61,21 +61,36 @@
 
 // 28. Find First Non-Repeated Character
 
+// public class BasiceString8 {
+//     public static void main(String[] args) {
+//         String str ="swiss";
+
+//         int [] count =new int[256];
+
+//         for(int i=0;i<str.length();i++){
+//             count[str.charAt(i)]++;
+//         }
+//         for(int i=0;i<str.length();i++){
+//             if(count[str.charAt(i)]==1){
+//                 System.out.println("First non-repeated character:"+str.charAt(i));
+//                 return;
+//             }
+//         }
+//         System.out.println("No non-repeated character found");
+//     }
+// }
+
+// 29. Print ASCII Value of Each Character
 public class BasiceString8 {
     public static void main(String[] args) {
-        String str ="swiss";
-
-        int [] count =new int[256];
+        String str ="Java";
 
         for(int i=0;i<str.length();i++){
-            count[str.charAt(i)]++;
+            char ch =str.charAt(i);
+
+            int ascii =ch;
+
+            System.out.println(ch+"="+ascii);
         }
-        for(int i=0;i<str.length();i++){
-            if(count[str.charAt(i)]==1){
-                System.out.println("First non-repeated character:"+str.charAt(i));
-                return;
-            }
-        }
-        System.out.println("No non-repeated character found");
     }
 }
