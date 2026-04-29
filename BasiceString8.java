@@ -55,7 +55,7 @@
 //         }
 //         System.out.println("Uppercase"+upper);
 //         System.out.println("Lowercase"+lower);
-        
+
 //     }
 // }
 
@@ -81,16 +81,39 @@
 // }
 
 // 29. Print ASCII Value of Each Character
+
+// public class BasiceString8 {
+//     public static void main(String[] args) {
+//         String str ="Java";
+
+//         for(int i=0;i<str.length();i++){
+//             char ch =str.charAt(i);
+
+//             int ascii =ch;
+
+//             System.out.println(ch+"="+ascii);
+//         }
+//     }
+// }
+
+// 30. Compress a String (Basic RLE Compression)
 public class BasiceString8 {
-    public static void main(String[] args) {
-        String str ="Java";
-
-        for(int i=0;i<str.length();i++){
-            char ch =str.charAt(i);
-
-            int ascii =ch;
-
-            System.out.println(ch+"="+ascii);
+    public static String compress(String str) {
+        StringBuilder result = new StringBuilder();
+        int count = 1;
+        for (int i = 0; i < str.length(); i++) {
+            if(i<str.length()-1 && str.charAt(i)==str.charAt(i+1)){
+                count++;
+            }else{
+                result.append(str.charAt(i)).append(count);
+                count =1;
+            }
         }
+        return result.toString();
+    }
+
+    public static void main(String[] args) {
+        String str = "aaabbc";
+        System.out.println(compress(str));
     }
 }
